@@ -1,0 +1,9 @@
+#develop a program that prompts the user to enter their current temperature in celcius and prints out whether they should wear a jacket (if temperature is below 20C) or not.
+
+def main():
+    temperature = float(input("Enter the current temperature in Celcius: "))
+
+    if temperature < 20:
+        print("It's cold outside. You should wear a jacket.")
+    else:
+        print("It's warm outside. You don't need a jacket.")
