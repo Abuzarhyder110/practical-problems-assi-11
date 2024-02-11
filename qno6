@@ -1,7 +1,7 @@
 #implement a program that takes the user's input of a year and month and prints out the number of days in that month, considering leap years.
 
 def is_leap_year(year):
-    if year % 4 == 0:
+    if year % 4 == 0: 
         if year % 100 == 0:
              if year % 400 == 0:
                  return True
@@ -13,4 +13,29 @@ def is_leap_year(year):
         return False
 
 def days_in_month(year, month):
-    days mapping = {
+    days_mapping = {
+        1: 31,  # January
+        2: 29,  if is_leap_year(year) 
+else 28,  # Febraury
+        3: 31,  # March
+        4: 30,  # April
+        5: 31,  # May
+        6: 30,  # June  
+        7: 31,  # July
+        8: 31,  # August
+        9: 30,  # September
+        10: 31,  # October
+        11: 30,  #November
+        12: 31,  #December       
+    }
+    if month in days mapping:
+        return days_mapping[month]
+    else:
+        return "Invalid month"
+ def main():
+     year = int(input(:Enter the year: "))
+     month = int(input("Enter the month as a number (1-12): "))
+
+     days = days_in_month(year, month)
+     print("Number of days in the month:", days)
+
