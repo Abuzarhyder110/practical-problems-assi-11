@@ -1,0 +1,16 @@
+#design a python program that calculates the total cost of items purchased by a costumer based on the provided unit price and quantity, applying a discount of 10% if the 
+#total cost exceeds $1000.
+
+def calculate_total_cost(unit_price,quantity):
+    total_cost = unit_price * quantity 
+    if total_cost > 1000:
+        total_cost *= 0.9 
+    return total_cost
+
+def main():
+    unit_price = float(input("Enter the unit price: "))
+    quantity = int(input("Enter the quantity purchased: "))
+
+    total_cost = 
+calculate_total_cost(unit_price,quantity)
+    print("Total cost: $", total cost)
