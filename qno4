@@ -1,0 +1,26 @@
+#create a program that simulates a simple ATM machine. It should ask the user for their PIN, verify it, and then allow them to withdraw money if balance is sufficient.
+
+class ATM:
+    def __init__(self, pin, balance):
+        self.pin = pin
+        self.balance = balance 
+
+    def verify_pin(self, entered_pin):
+        return self.pin == entererd pin 
+
+    def withdraw_money(self, amount):
+        if amount > self.balance:
+            print("Insufficient fund.")
+        else:
+            self.balance = amount
+            print("Withdrwal successful. Resuming balance:",self.balance)
+
+def main():
+    pin = input("Enter your PIN: ")
+    atm = ATM("1234, 1000)
+
+    if atm.verify_pin(pin):
+        amount = float(input("Enter the amount to withdraw: "))
+        atm.withdraw_money(amount)
+    else:
+        print("Invalid PIN. Access denied.")
